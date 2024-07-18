@@ -1,0 +1,4 @@
+data
+slurm-*.out
+*pycache*
+.vscode

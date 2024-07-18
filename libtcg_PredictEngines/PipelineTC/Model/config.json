@@ -1,0 +1,7 @@
+{
+    "inp_path": "/N/slate/tnn3/DucHGA/PipelineTC/Input2/",
+    "isAgg": true,
+    "out_path": "/N/slate/tnn3/DucHGA/PipelineTC/Output/",
+    "model_type": "CNN2D",
+    "pth_path": "/N/slate/tnn3/DucHGA/PipelineTC/Misc/model.pt"
+}
