@@ -1,23 +1,24 @@
 # TC_PREDICT PIPELINE
 
-## Current datasources
+## Input dataset
 
-- `ncep-fnl` (completed)
-- `nasa-merra2` (in development)
+* `ncep-fnl` (completed)
+* `nasa-merra2` (in progress)
 
-## Current PredictEngines
+## Current typhoon prediction engines
 
-- [PipelineTC](https://github.com/AnhDucHoangGia/PipelineTC/)
+* [PipelineTC](https://github.com/AnhDucHoangGia/PipelineTC/)
 
 ## INPUT STRUCTURE
 
 Folder: `./data/input`
 
-Requires NetCDF (`*.nc`, `*.nc4`) files which contain weather data on ONE timestamp.
+Input files: NetCDF (`*.nc`, `*.nc4`) files containing weather data at ONE timestamp.
 
 ## OUTPUT
 
-Returns one NetCDF file (`*.nc`) which contains numerical values and one PDF (`*.pdf`) is the rendered plot from prediction result.
+* One NetCDF file (`*.nc`) which contains numerical values
+* One rendered plot from prediction result (`*.pdf`).
 
 ![Demo rendered result](demo.png "Demo rendered result")
 
