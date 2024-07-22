@@ -114,12 +114,12 @@ if __name__=="__main__":
     argparser.add_argument("-t", "--concurrent-thread-count", default=8, help="Number of concurrent thread per process.")
     args = argparser.parse_args()
     Predict(
-        input_path=args["input"],
-        output_path=args["output"],
-        model_type=args["model_type"],
-        model_path=args["model_path"],
-        proc_count=args["process_count"],
-        subproc_count=args["concurrent_thread_count"],
-        clean_up=args["delete_temp_files"],
-        plot_fig=(not args["no_pdf"])
+        input_path=args.input,
+        output_path=args.output,
+        model_type=args.model_type,
+        model_path=args.model_path,
+        proc_count=args.process_count,
+        subproc_count=args.concurrent_thread_count,
+        clean_up=args.delete_temp_files,
+        plot_fig=(not args.no_pdf)
     )
