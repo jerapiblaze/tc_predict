@@ -19,4 +19,5 @@ module load miniconda
 ######  Job commands go below this line #####
 cd ~/workspace/tc_predict
 conda activate hurricane-ml
-python3 predict.py
+# python3 predict.py
+python3 predict.py ./data/input/sample4

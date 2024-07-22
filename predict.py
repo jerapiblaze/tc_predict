@@ -19,6 +19,7 @@ logger = logging.getLogger(
 import xarray as xr
 import shutil
 import datetime
+import argparse
 import libctg_WeatherDataset as wd
 from libtcg_SliceWindow import SliceWindow
 from libtcg_PredictEngines.PipelineTC.pipeline import pipeline as Predictor
@@ -101,6 +102,24 @@ def Predict(
     exit()
 
 if __name__=="__main__":
+    argparser = argparse.ArgumentParser()
+    argparser.add_argument("input", help="Input folder. Example: './data/input/sample4'")
+    argparser.add_argument("-o", "--output", default="./data/output", help="Output folder. Example: './data/output'")
+    # argparser.add_argument("-t", "--temp-dir", default="./data/temp", help="Temporary files directory.")
+    argparser.add_argument("-d", "--delete-temp-files", action="store_true", default=False, help="Delete temporary data files.")
+    argparser.add_argument("-m", "--model-type", default="CNN2D", help="Model name")
+    argparser.add_argument("-p", "--model-path", default="./data/models/model.pt", help="Model path")
+    argparser.add_argument("-n", "--no-pdf", action="store_true", default=False, help="No pdf render.")
+    argparser.add_argument("-i", "--concurrent-process-count", default=8, help="Number of concurrent process.")
+    argparser.add_argument("-t", "--concurrent-thread-count", default=8, help="Number of concurrent thread per process.")
+    args = argparser.parse_args()
     Predict(
-        input_path='data/input/sample4'
+        input_path=args["input"],
+        output_path=args["output"],
+        model_type=args["model_type"],
+        model_path=args["model_path"],
+        proc_count=args["process_count"],
+        subproc_count=args["concurrent_thread_count"],
+        clean_up=args["delete_temp_files"],
+        plot_fig=(not args["no_pdf"])
     )
