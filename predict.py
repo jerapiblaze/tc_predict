@@ -118,7 +118,7 @@ if __name__=="__main__":
         output_path=args.output,
         model_type=args.model_type,
         model_path=args.model_path,
-        proc_count=args.process_count,
+        proc_count=args.concurrent_process_count,
         subproc_count=args.concurrent_thread_count,
         clean_up=args.delete_temp_files,
         plot_fig=(not args.no_pdf)
