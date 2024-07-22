@@ -25,7 +25,7 @@
 
 Work.In.Progress...
 
-## Usage
+## Usage (interactive)
 
 Typical: `python predict.py ./data/input/predict`
 
@@ -54,3 +54,7 @@ options:
   -t CONCURRENT_THREAD_COUNT, --concurrent-thread-count CONCURRENT_THREAD_COUNT
                         Number of concurrent thread per process.
 ```
+
+## Usage (slurm job)
+
+Use template from `demo-predict.sh` and modify the command based on [Usage (interactive)](#usage-interactive).
