@@ -27,4 +27,30 @@ Work.In.Progress...
 
 ## Usage
 
-Work.In.Progress...
+Typical: `python predict.py ./data/input/predict`
+
+For more complex usages, see `python predict.py -h`
+
+```console
+$ python predict.py -h
+usage: predict.py [-h] [-o OUTPUT] [-d] [-m MODEL_TYPE] [-p MODEL_PATH] [-n] [-i CONCURRENT_PROCESS_COUNT] [-t CONCURRENT_THREAD_COUNT] input
+
+positional arguments:
+  input                 Input folder. Example: './data/input/sample4'
+
+options:
+  -h, --help            show this help message and exit
+  -o OUTPUT, --output OUTPUT
+                        Output folder. Example: './data/output'
+  -d, --delete-temp-files
+                        Delete temporary data files.
+  -m MODEL_TYPE, --model-type MODEL_TYPE
+                        Model name
+  -p MODEL_PATH, --model-path MODEL_PATH
+                        Model path
+  -n, --no-pdf          No pdf render.
+  -i CONCURRENT_PROCESS_COUNT, --concurrent-process-count CONCURRENT_PROCESS_COUNT
+                        Number of concurrent process.
+  -t CONCURRENT_THREAD_COUNT, --concurrent-thread-count CONCURRENT_THREAD_COUNT
+                        Number of concurrent thread per process.
+```
