@@ -5,6 +5,17 @@ from mpl_toolkits.basemap import Basemap
 import xarray as xr
 
 def Plot(ds:xr.Dataset, savepath:str):
+    """
+    Plot the hurricane prediction data on a map.
+
+    Parameters:
+    - ds (xr.Dataset): The dataset containing the hurricane prediction data.
+    - savepath (str): The path to save the generated plot.
+
+    Returns:
+    None
+    """
+    
     LAT_ARR = np.asarray(ds["lat"].values)
     LON_ARR = np.asarray(ds["lon"].values)
     data = np.asarray(ds['score'].values)
