@@ -20,6 +20,24 @@ def SliceWindow(
     proc_count:int=1,
     subproc_count:int=1
 ):
+    """
+    SliceWindow function slices the input weather dataset into smaller windows based on the specified latitude and longitude dimensions.
+    
+    Args:
+        WD (WeatherDataset): The weather dataset object.
+        input_path (str): The path to the input files.
+        output_path (str): The path to save the sliced window files.
+        lat_min (float, optional): The minimum latitude value for slicing. Defaults to None.
+        lat_max (float, optional): The maximum latitude value for slicing. Defaults to None.
+        lon_min (float, optional): The minimum longitude value for slicing. Defaults to None.
+        lon_max (float, optional): The maximum longitude value for slicing. Defaults to None.
+        lat_dim (float, optional): The latitude dimension for each window. Defaults to 17.
+        lon_dim (float, optional): The longitude dimension for each window. Defaults to 17.
+        nstep (int, optional): The step size for iterating over the latitude and longitude. Defaults to 1.
+        proc_count (int, optional): The number of processes to use for slicing. Defaults to 1.
+        subproc_count (int, optional): The number of sub-processes to be used for saving to NetCDF file.
+    """
+    
     queue = mp.Queue()
     input_file_paths = RecurseListDir(input_path, ["*.nc"])
     logger.info(f"Total input files: {len(input_file_paths)}")
@@ -47,6 +65,18 @@ def SliceWindow(
     
         
 def GetSliceWindow_Worker(queue:mp.Queue, WD: WeatherDataset, subproc_count:int):
+    """
+    Worker function that processes jobs from a queue and calls the GetSliceWindow function.
+
+    Args:
+        queue (mp.Queue): The queue containing the jobs to be processed.
+        WD (WeatherDataset): The WeatherDataset object used for processing.
+        subproc_count (int): The number of sub-processes to be used for saving to NetCDF file.
+
+    Returns:
+        None
+    """
+    
     child_logger = logger.getChild("GetSliceWindows_Worker")
     child_logger.info(f"Start")
     while (queue.qsize()):
@@ -75,6 +105,23 @@ def GetSliceWindow(
     nstep:int=1,
     proc_count:int=1
 ):
+    """
+    Extracts a slice window from a weather dataset and saves the slices as NetCDF files.
+
+    Args:
+        WD (WeatherDataset): The weather dataset object.
+        wd_path (str): The path to the weather dataset file.
+        output_path (str): The path to the output directory where the slice files will be saved.
+        lat_min (float, optional): The minimum latitude of the slice window. Defaults to None.
+        lat_max (float, optional): The maximum latitude of the slice window. Defaults to None.
+        lon_min (float, optional): The minimum longitude of the slice window. Defaults to None.
+        lon_max (float, optional): The maximum longitude of the slice window. Defaults to None.
+        lat_dim (float, optional): The latitude dimension of each slice. Defaults to 17.
+        lon_dim (float, optional): The longitude dimension of each slice. Defaults to 17.
+        nstep (int, optional): The step size for iterating over the latitude and longitude. Defaults to 1.
+        proc_count (int, optional): The number of processes to use to save to NetCDF file.
+    """
+    
     w_ds = WD.LoadFromDisk(wd_path)
     LAT_ARR = np.asarray(w_ds["latitude"].values)
     LON_ARR = np.asarray(w_ds["longitude"].values)
@@ -218,6 +265,18 @@ def GetSliceWindow(
         p.join()
             
 def GetSample_Worker(queue:mp.Queue, WD:WeatherDataset, w_ds):
+    """
+    Process the jobs in the queue to get weather samples and save them to disk.
+
+    Args:
+        queue (mp.Queue): The job queue.
+        WD (WeatherDataset): The WeatherDataset object.
+        w_ds: The weather dataset.
+
+    Returns:
+        None
+    """
+    
     child_logger = logger.getChild(f"GetSample_Worker@{os.getppid()}")
     child_logger.info("Start!")
     while (queue.qsize()):
