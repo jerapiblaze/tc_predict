@@ -19,7 +19,7 @@ This repository provides a pipeline to execute any tropical cyclone (TC) predict
 
 ![Demo rendered result](demo.png "Demo rendered result")
 
-### Usage (interactive)
+### Local usage (interactive)
 
 * Python command to perform typhoon formation prediction on all data provided in `./data/input/predict` folder:\
   `python predict.py ./data/input/predict`
@@ -50,6 +50,26 @@ options:
                         Number of concurrent thread per process.
 ```
 
-### Usage (slurm job)
+### Usage in BigRed200 (Slurm job)
 
 * To execute this code on BigRed200 (i.e., submit a Slurm job), please use the template from `demo-predict.sh` and modify the command based on [Usage (interactive)](#usage-interactive).
+* Data path: `/N/u/tqluu/BigRed200/@PUBLIC/tc_predict-debug/`  
+
+Structure of the data location:
+```
+data
+├── out
+│      	├── nasa-merra2
+│ 	│ 	├── off_facebook_m10_c10.zip
+│   	│  	└── ...
+│	└── ncep-fnl
+│	 	├── w_off_facebook_m10_c10.zip
+│	  	└── ...
+└── raw
+   	├── batch
+ 	│ 	├── on_synthetic_batch_m10_c8000_l2.zip
+   	│  	└── ...
+   	└── nobatch
+ 	 	├── on_synthetic_nobatch_m10_c2000_l2.zip
+  		└── ...
+```
