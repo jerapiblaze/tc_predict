@@ -1,31 +1,27 @@
 # TC_PREDICT PIPELINE
 
-## Input dataset
 
-* `ncep-fnl` (completed)
-* `nasa-merra2` (in progress)
+### Prerequisites
+* Typhoon prediction engines: [PipelineTC](https://github.com/AnhDucHoangGia/PipelineTC/)
+* Datasets: * `ncep-fnl` or * `nasa-merra2` (in `*.nc` format)
 
-## Current typhoon prediction engines
+### Input
 
-* [PipelineTC](https://github.com/AnhDucHoangGia/PipelineTC/)
-
-## INPUT STRUCTURE
-
-* Folder: `./data/input`
+* Input folder: `./data/input`
 * Input files: NetCDF (`*.nc`, `*.nc4`) files containing weather data at ONE timestamp.
 
-## OUTPUT
+### Output
 
 * One NetCDF file (`*.nc`) containing the prediction result for the considering sample (continuous value ranging in `[0,1]`)
 * One rendered plot from prediction result (`*.pdf`).
 
 ![Demo rendered result](demo.png "Demo rendered result")
 
-## Parameters
+### Parameters
 
 Work.In.Progress...
 
-## Usage (interactive)
+### Usage (interactive)
 
 Typical: `python predict.py ./data/input/predict`
 
