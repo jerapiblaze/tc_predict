@@ -19,7 +19,7 @@ This repository provides a pipeline to execute any tropical cyclone (TC) predict
 
 ![Demo rendered result](demo.png "Demo rendered result")
 
-### Usage in local (interactive)
+### Usage in local
 
 * Python command to perform TC prediction on all data provided in `./data/input/predict` folder: `python predict.py ./data/input/predict`
 
@@ -51,5 +51,5 @@ options:
 
 ### Usage in BigRed200 (Slurm job)
 
-* To execute this code on BigRed200 (i.e., submit a Slurm job), please use the template from `demo-predict.sh` and modify the command based on [Usage (interactive)](#usage-interactive).
+* To execute this code on BigRed200 (i.e., submit a Slurm job), please use the template from `demo-predict.sh` and modify the command based on [Usage in local](#usage-in-local).
 * Data path: `/N/u/tqluu/BigRed200/@PUBLIC/tc_predict-debug/`  
