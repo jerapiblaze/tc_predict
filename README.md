@@ -17,10 +17,6 @@
 
 ![Demo rendered result](demo.png "Demo rendered result")
 
-### Parameters
-
-Work.In.Progress...
-
 ### Usage (interactive)
 
 Typical: `python predict.py ./data/input/predict`
