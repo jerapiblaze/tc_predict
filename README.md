@@ -1,4 +1,4 @@
-# Tropical Cyclone Prediction Pipeline (TCP-Pipepline)
+# Tropical Cyclone Prediction Pipeline (TCP-Pipeline)
 
 This repository provides a pipeline to execute any tropical cyclone (TC) predictor on a predetermined geographical area (e.g., Western North Pacific Basin). The input dataset is obtained via performing a window sliding through all the area, wherein each sample (or window) has a fixed dimension (`17x17` in the provided dataset).
 
