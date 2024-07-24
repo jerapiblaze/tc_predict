@@ -4,7 +4,7 @@ This repository provides a pipeline to execute any tropical cyclone (TC) predict
 
 
 ### Prerequisites
-* Typhoon prediction engines: Provided in `./libtcg_PredictEngines/PipelineTC` (forked from the repo [PipelineTC](https://github.com/AnhDucHoangGia/PipelineTC/) of VNU-UET team)
+* A TC prediction engine: Provided in `./libtcg_PredictEngines/PipelineTC` (forked from the repo [PipelineTC](https://github.com/AnhDucHoangGia/PipelineTC/) of VNU-UET team)
 * Datasets: `ncep-fnl` or `nasa-merra2` (in `*.nc` format)
 
 ### Input
