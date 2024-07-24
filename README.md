@@ -19,7 +19,7 @@ This repository provides a pipeline to execute any tropical cyclone (TC) predict
 
 ![Demo rendered result](demo.png "Demo rendered result")
 
-### Local usage (interactive)
+### Usage in local (interactive)
 
 * Python command to perform typhoon formation prediction on all data provided in `./data/input/predict` folder:\
   `python predict.py ./data/input/predict`
