@@ -1,4 +1,6 @@
-# TC_PREDICT PIPELINE
+# Tropical Cyclone Prediction Pipeline (TCP-Pipepline)
+
+This repository provides a pipeline to execute any tropical cyclone (TC) predictor on a predetermined geographical area (e.g., South China Sea). 
 
 
 ### Prerequisites
