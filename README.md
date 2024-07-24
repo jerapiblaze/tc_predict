@@ -59,17 +59,39 @@ Structure of the data location:
 ```
 data
 ├── out
-│      	├── nasa-merra2
-│ 	│ 	├── off_facebook_m10_c10.zip
-│   	│  	└── ...
-│	└── ncep-fnl
-│	 	├── w_off_facebook_m10_c10.zip
-│	  	└── ...
-└── raw
-   	├── batch
- 	│ 	├── on_synthetic_batch_m10_c8000_l2.zip
-   	│  	└── ...
-   	└── nobatch
- 	 	├── on_synthetic_nobatch_m10_c2000_l2.zip
-  		└── ...
+│   ├── nasa-merra2
+│ 	│ 	├── DynamicDomain
+│ 	│ 	├── FixedDomain
+│ 	│ 	├── PastDomain
+│ 	│ 	└── SequenceArea
+│ 	│ 	 	├── merra2_yyyy_mm_dd_HH_MM
+│ 	│ 	 	│	├── merra2_yyyy_mm_dd_HH_MM_lat_lon.nc
+│ 	│ 	 	│	├── ...
+│ 	│ 		│	└── merra2_yyyy_mm_dd_HH_MM_lat_lon.nc
+│ 	│ 		│
+│ 	│ 	 	└── merra2_yyyy_mm_dd_HH_MM
+│ 	│ 	 		├── merra2_yyyy_mm_dd_HH_MM_lat_lon.nc
+│ 	│ 	 		├── ...
+│ 	│ 			└── merra2_yyyy_mm_dd_HH_MM_lat_lon.nc
+│   │
+│   └── ncep-fnl
+│ 	 	├── DynamicDomain
+│ 	 	├── FixedDomain
+│ 	 	├── PastDomain
+│ 	 	└── SequenceArea
+│ 	 	 	├── merra2_yyyy_mm_dd_HH_MM
+│ 	 	 	│	├── merra2_yyyy_mm_dd_HH_MM_lat_lon.nc
+│ 	 	 	│	├── ...
+│ 			│	└── merra2_yyyy_mm_dd_HH_MM_lat_lon.nc
+│ 	 		│
+│ 	 	 	└── merra2_yyyy_mm_dd_HH_MM
+│ 	 	 		├── merra2_yyyy_mm_dd_HH_MM_lat_lon.nc
+│ 	 	 		├── ...
+│ 	 			└── merra2_yyyy_mm_dd_HH_MM_lat_lon.nc
+├── raw
+│   ├── nasa-merra2
+│   └── ncep-fnl
+└── temp
+   	├── nasa-merra2
+   	└── ncep-fnl
 ```
