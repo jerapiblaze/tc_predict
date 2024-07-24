@@ -50,4 +50,4 @@ options:
 
 ### Usage (slurm job)
 
-Use template from `demo-predict.sh` and modify the command based on [Usage (interactive)](#usage-interactive).
+* To execute this code on BigRed200 (i.e., submit a Slurm job), please use the template from `demo-predict.sh` and modify the command based on [Usage (interactive)](#usage-interactive).
