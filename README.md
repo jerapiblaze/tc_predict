@@ -19,9 +19,9 @@
 
 ### Usage (interactive)
 
-Typical: `python predict.py ./data/input/predict`
+* Python command to perform typhoon formation prediction on all data provided in `./data/input/predict` folder: `python predict.py ./data/input/predict`
 
-For more complex usages, see `python predict.py -h`
+* For more complex usages, see `python predict.py -h`
 
 ```console
 $ python predict.py -h
