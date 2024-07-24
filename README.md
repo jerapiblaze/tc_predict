@@ -59,39 +59,39 @@ Structure of the data location:
 ```
 data
 ├── out
-│   ├── nasa-merra2
-│ 	│ 	├── DynamicDomain
-│ 	│ 	├── FixedDomain
-│ 	│ 	├── PastDomain
-│ 	│ 	└── SequenceArea
-│ 	│ 	 	├── merra2_yyyy_mm_dd_HH_MM
-│ 	│ 	 	│	├── merra2_yyyy_mm_dd_HH_MM_lat_lon.nc
-│ 	│ 	 	│	├── ...
-│ 	│ 		│	└── merra2_yyyy_mm_dd_HH_MM_lat_lon.nc
-│ 	│ 		│
-│ 	│ 	 	└── merra2_yyyy_mm_dd_HH_MM
-│ 	│ 	 		├── merra2_yyyy_mm_dd_HH_MM_lat_lon.nc
-│ 	│ 	 		├── ...
-│ 	│ 			└── merra2_yyyy_mm_dd_HH_MM_lat_lon.nc
-│   │
-│   └── ncep-fnl
-│ 	 	├── DynamicDomain
-│ 	 	├── FixedDomain
-│ 	 	├── PastDomain
-│ 	 	└── SequenceArea
-│ 	 	 	├── merra2_yyyy_mm_dd_HH_MM
-│ 	 	 	│	├── merra2_yyyy_mm_dd_HH_MM_lat_lon.nc
-│ 	 	 	│	├── ...
-│ 			│	└── merra2_yyyy_mm_dd_HH_MM_lat_lon.nc
-│ 	 		│
-│ 	 	 	└── merra2_yyyy_mm_dd_HH_MM
-│ 	 	 		├── merra2_yyyy_mm_dd_HH_MM_lat_lon.nc
-│ 	 	 		├── ...
-│ 	 			└── merra2_yyyy_mm_dd_HH_MM_lat_lon.nc
+│	├── nasa-merra2
+│	│	├── DynamicDomain
+│	│	├── FixedDomain
+│	│	├── PastDomain
+│	│	└── SequenceArea
+│	│	├── merra2_yyyy_mm_dd_HH_MM
+│	│	│	├── merra2_yyyy_mm_dd_HH_MM_lat_lon.nc
+│	│	│	├── ...
+│	│	│	└── merra2_yyyy_mm_dd_HH_MM_lat_lon.nc
+│	│	│
+│	│	└── merra2_yyyy_mm_dd_HH_MM
+│	│		├── merra2_yyyy_mm_dd_HH_MM_lat_lon.nc
+│	│		├── ...
+│	│		└── merra2_yyyy_mm_dd_HH_MM_lat_lon.nc
+│	│
+│	└── ncep-fnl
+│		├── DynamicDomain
+│		├── FixedDomain
+│		├── PastDomain
+│		└── SequenceArea
+│			├── merra2_yyyy_mm_dd_HH_MM
+│			│	├── merra2_yyyy_mm_dd_HH_MM_lat_lon.nc
+│			│	├── ...
+│			│	└── merra2_yyyy_mm_dd_HH_MM_lat_lon.nc
+│			│
+│			└── merra2_yyyy_mm_dd_HH_MM
+│				├── merra2_yyyy_mm_dd_HH_MM_lat_lon.nc
+│				├── ...
+│				└── merra2_yyyy_mm_dd_HH_MM_lat_lon.nc
 ├── raw
-│   ├── nasa-merra2
-│   └── ncep-fnl
+│	├── nasa-merra2
+│	└── ncep-fnl
 └── temp
-   	├── nasa-merra2
-   	└── ncep-fnl
+	├── nasa-merra2
+	└── ncep-fnl
 ```
