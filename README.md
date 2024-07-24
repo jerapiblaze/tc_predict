@@ -2,7 +2,7 @@
 
 
 ### Prerequisites
-* Typhoon prediction engines: [PipelineTC](https://github.com/AnhDucHoangGia/PipelineTC/)
+* Typhoon prediction engines: [PipelineTC](https://github.com/AnhDucHoangGia/PipelineTC/) (developed by VNU-UET team)
 * Datasets: * `ncep-fnl` or * `nasa-merra2` (in `*.nc` format)
 
 ### Input
